@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muiz Besar</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<!-- Video Background -->
+<video autoplay muted loop id="bgVideo">
+    <source src="./media/background.mp4" type="video/mp4">
+    <!-- Add more source elements for other video formats if needed -->
+</video>
+
+<body class="flex flex-col justify-center items-center min-h-screen bg-black">
+    <!-- Header -->
+    <div class="text-center text-white py-4 px-8 text-4xl font-semibold w-full">
+        Muiz Besar
+    </div>
+
+    <!-- Image Icons using Font Awesome -->
+    <div class="flex justify-center space-x-6 p-4">
+        <!-- LinkedIn Icon -->
+        <a href="https://www.linkedin.com/in/muiz-besar-612253284/" target="_blank">
+            <i class="fab fa-linkedin fa-2x text-white"></i>
+        </a>
+        <!-- GitHub Icon -->
+        <a href="https://github.com/MuizBesar" target="_blank">
+            <i class="fab fa-github fa-2x text-white"></i>
+        </a>
+        <!-- itch.io Icon -->
+        <a href="https://ambulung.itch.io/" target="_blank">
+            <i class="fab fa-itch-io fa-2x text-white"></i>
+        </a>
+        <!-- Email Icon -->
+        <a href="mailto:muizbesar1@gmail.com" target="_blank">
+            <i class="far fa-envelope fa-2x text-white"></i>
+        </a>
+    </div>
+
+    <!-- Image Click Content -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+        <!-- Image 1 -->
+        <div class="cursor-pointer p-4 img-container img-hover-container">
+            <div class="relative">
+                <img src="./media/image1.jpg" alt="Image 1" class="w-48 h-96 object-cover" />
+                <div
+                    class="bg-black p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-lg text-2xl">
+                    <div onclick="toggleContent('content1')">Who?</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="cursor-pointer p-4 img-container img-hover-container">
+            <div class="relative">
+                <img src="./media/image2.png" alt="Image 2" class="w-48 h-96 object-cover" />
+                <div
+                    class="bg-black p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-lg text-2xl">
+                    <div onclick="toggleContent('content2')">Projects</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="cursor-pointer p-4 img-container img-hover-container">
+            <div class="relative">
+                <img src="./media/image4.png" alt="Image 3" class="w-48 h-96 object-cover" />
+                <div
+                    class="bg-black p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-lg text-2xl">
+                    <div onclick="toggleContent('content3')">Experiences</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="cursor-pointer p-4 img-container img-hover-container">
+            <div class="relative">
+                <img src="./media/image3.png" alt="Image 4" class="w-48 h-96 object-cover" />
+                <div
+                    class="bg-black p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-lg text-2xl">
+                    <div onclick="toggleContent('content4')">Achievements</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="cursor-pointer p-4 img-container img-hover-container">
+            <div class="relative">
+                <img src="./media/image5.png" alt="Image 5" class="w-48 h-96 object-cover" />
+                <div
+                    class="bg-black p-2 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white font-bold text-lg text-2xl">
+                    <div onclick="toggleContent('content5')">Contact</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hidden Content for Images -->
+
+        <div id="content1" class="hidden-content">
+            <h2 class="text-2xl font-semibold">Game Developer and Web developer</h2>
+            <p>I have knowledge coding video games with c# using unity engine. Proficient in html, css and JavaScript. I
+                am able to make website with React and Laravel but can learn other framework or library if required.
+                Also have some knowledge in python.</p>
+            <div class="flex gap-5 p-5">
+                <img src="./media/logos/unity.png" alt="" class="w-40 h-16">
+                <img src="./media/logos/html.png" alt="" class="w-16 h-16">
+                <img src="./media/logos/laravel.png" alt="" class="w-16 h-16">
+                <img src="./media/logos/react.png" alt="" class="w-16 h-16">
+                <img src="./media/logos/python.png" alt="" class="w-16 h-16">
+            </div>
+            <button onclick="hideContent('content1')" class="close-button">Close</button>
+        </div>
+
+        <div id="content2" class="hidden-content">
+            <h2 class="text-2xl font-semibold">Games, Software and Websites.</h2>
+            <p>With Unity: Released 18 short games as a hobby. Most of the games are 2D platforming. Some games are also
+                made in 3D. All games can be found on my itch.io page. <a href="https://ambulung.itch.io/"
+                    class="text-blue-500 underline">Click Here!</a></p>
+            <br>
+            <p>Websites: All websites that I made is being published on github. Some notable that I made for a countdown
+                of a game, quote generator, currency converter and stopwatch. You can find all projects on my github
+                repositories. <a href="https://github.com/MuizBesar?page=1&tab=repositories"
+                    class="text-blue-500 underline">Click Here!</a> </p>
+            <br>
+            <p>With Python: Some notable projects includes background remover, password generator, colour finder and
+                autosort files. I also tried making games with pygame. Games I made are snake, tetris and trivia games.
+                You can find all projects on my github repositories. <a
+                    href="https://github.com/MuizBesar?page=1&tab=repositories" class="text-blue-500 underline">Click
+                    Here!</a></p>
+            <button onclick="hideContent('content2')" class="close-button">Close</button>
+        </div>
+
+        <div id="content3" class="hidden-content">
+            <h2 class="text-2xl font-semibold">Game Development Veteran, Newbie Web developer</h2>
+            <p>As Game Developer: On and off game developer for 2 years as I only do it as a hobby. I have been
+                requested to make games catered to user's needs and made the game.</p>
+            <br>
+            <p>As Website developer: I only just started website development earlier this year (2023). Since then, I
+                have made and published website on my github. No actual website has been released as of yet.</p>
+            <button onclick="hideContent('content3')" class="close-button">Close</button>
+        </div>
+
+        <div id="content4" class="hidden-content">
+            <h2 class="text-2xl font-semibold">Hackthon Champion, Multiple Projects Released.</h2>
+            <p>A group of 5 has made a mobile app regarding mental health awareness. This app have 4 main features that
+                includes Event tracker, breathing exercise, mental health information and an AI Chatbot that can answer
+                question regarding mental health.</p>
+            <br>
+            <p>Multiple projects released using Python, HTML and Unity which can be found on my <a
+                    href="https://ambulung.itch.io/" class="text-blue-500 underline">Itch.io</a> and <a
+                    href="https://github.com/MuizBesar?page=1&tab=repositories"
+                    class="text-blue-500 underline">Github</a>.</p>
+            <button onclick="hideContent('content4')" class="close-button">Close</button>
+        </div>
+        <div id="content5" class="hidden-content">
+            <h2 class="text-2xl font-semibold">Intrested?</h2>
+            <p>You can find me on <a href="https://www.linkedin.com/in/muiz-besar-612253284/"
+                    class="text-blue-500 underline">linkedin</a></p>
+            <br>
+            <p>Email me at: <a href="mailto:muizbesar1@gmail.com"
+                    class="text-blue-500 underline">muizbesar1@gmail.com</a></p>
+            <br>
+            <button onclick="hideContent('content5')" class="close-button">Close</button>
+        </div>
+
+
+
+        <!-- Include JavaScript to handle click events and show/hide content -->
+        <script src="script.js">
+
+        </script>
+</body>
+
+</html>
